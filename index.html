@@ -1,29 +1,64 @@
-﻿﻿﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slime Laboratory</title>
-    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-    <script src="https://apis.google.com/js/platform.js"></script>   
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-        ruffle-player {
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+
+    <!-- Librerías necesarias -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.cooljuegos.com/js/savedslots.js"></script>
+    <script src="https://www.cooljuegos.com/js/gameflare-asdk.js"></script>
+    <script src="https://www.cooljuegos.com/emulators/ruffle/ruffle.js?release=2025-11-12"></script>
 </head>
 <body>
-    <!-- Contenedor del juego -->
-    <div class="game-container" id="gameContainer">
-        <embed src="Slime-Laboratory.swf" id="gameEmbed" width="100%" height="100%">
+    <div id="ruffle" style="width: 100%; height: 100vh; background: #000;"></div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            SavedSlots.run({
+                "gameId": 10674,
+                "slug": "slime-laboratory",
+                "isLoggedIn": false,
+                "ignore": ["analytics", "log"],
+                "url": {
+                    "initialization": "https://www.cooljuegos.com/initialization/",
+                    "iframe": "https://www.cooljuegos.com/saved-slots/?id=2c3ea1235dcdb192797382358beeb09b",
+                    "ajax": "https://www.cooljuegos.com/saved-slots/ajax/"
+                },
+                "auth": { "message": "Actualice la página e intente nuevamente." }
+            });
+        });
+    </script>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            GameflareAsdk.loadGame(function() {
+                window.RufflePlayer = window.RufflePlayer || {};
+                window.RufflePlayer.config = {
+                    warnOnUnsupportedContent: false,
+                    maxExecutionDuration: 60,
+                    base: null,
+                    forceScale: true,
+                    quality: 'high',
+                    allowScriptAccess: false
+                };
+
+                const _fetch = window.fetch;
+                window.fetch = async (resource, options) => {
+                    if (resource instanceof Request && resource.url.replace('http://', 'https://') === 'https://neutronized.com/slimelaboratory.swf') {
+                        let response = await _fetch('https://data.gameflare.com/games/10674/52C8I2KIjjsBSW.swf', options);
+                        Object.defineProperty(response, 'url', { value: 'https://neutronized.com/slimelaboratory.swf' });
+                        return response;
+                    }
+                    return await _fetch(resource, options);
+                };
+
+                const player = window.RufflePlayer.newest().createPlayer();
+                $('#ruffle').append(player);
+                player.load('https://neutronized.com/slimelaboratory.swf');
+            });
+        });
+    </script>
 </body>
 </html>
