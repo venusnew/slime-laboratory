@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files>
+  <file name="!!!.png" source="original">
+    <mtime>1703169381</mtime>
+    <size>45102</size>
+    <md5>31bfd01dfadc1ce3f578f005c69b7170</md5>
+    <crc32>66446edb</crc32>
+    <sha1>9585f115a394e4489a944e6286932d342eef9f76</sha1>
+    <format>Emulator Screenshot</format>
+  </file>
+  <file name="!!!_thumb.jpg" source="derivative">
+    <format>JPEG Thumb</format>
+    <original>!!!.png</original>
+    <mtime>1703169873</mtime>
+    <size>8132</size>
+    <md5>29cad6bd2b234f81ae884629d3f32694</md5>
+    <crc32>b6cd82f1</crc32>
+    <sha1>ff0698065aa756492fa267bbeedaddc6fc9257e4</sha1>
+  </file>
+  <file name="SlimeLaboratory.swf" source="original">
+    <mtime>1703169359</mtime>
+    <size>1351775</size>
+    <md5>1960818e47b3e5b476328b815cba2d54</md5>
+    <crc32>bab713b1</crc32>
+    <sha1>80fb397341e5f95f665ea711a21f2f8fefef1cbc</sha1>
+    <format>Shockwave Flash</format>
+    <length>0.07</length>
+    <width>640</width>
+    <height>480</height>
+    <viruscheck>1703169835</viruscheck>
+  </file>
+  <file name="__ia_thumb.jpg" source="original">
+    <mtime>1703169464</mtime>
+    <size>13546</size>
+    <md5>43030dfaf2ad7dfef02e86787524e650</md5>
+    <crc32>b5f6542e</crc32>
+    <sha1>8d3f55f7ffea66045750f257493cf56b3a1f9eea</sha1>
+    <format>Item Tile</format>
+    <rotation>0</rotation>
+  </file>
+  <file name="slime-laboratory_202312_archive.torrent" source="metadata">
+    <btih>1627c351a67baac9bb6b5b90e860a0b565470f67</btih>
+    <mtime>1704167436</mtime>
+    <size>2288</size>
+    <md5>4df0fa14fa66ad314a407a07f8e1a9e5</md5>
+    <crc32>67034bf3</crc32>
+    <sha1>9b926f4f478ff14915b7939cbaf8180d7e937afe</sha1>
+    <format>Archive BitTorrent</format>
+  </file>
+  <file name="slime-laboratory_202312_files.xml" source="original">
+    <format>Metadata</format>
+    <md5>d89695ea7df0adb6ef8f7a21fb93349f</md5>
+    <summation>md5</summation>
+  </file>
+  <file name="slime-laboratory_202312_meta.sqlite" source="original">
+    <mtime>1703169457</mtime>
+    <size>20480</size>
+    <md5>afae40e10eb22568536d76c089ad3019</md5>
+    <crc32>893c549d</crc32>
+    <sha1>33d08a522a3a52e73e67e0cecfdf7ce265cbaa40</sha1>
+    <format>Metadata</format>
+  </file>
+  <file name="slime-laboratory_202312_meta.xml" source="original">
+    <mtime>1704167432</mtime>
+    <size>1020</size>
+    <md5>e72057b9ad1b38a453c874e393c82b1e</md5>
+    <crc32>4b363923</crc32>
+    <sha1>639b46521cd5905fe839d35c76f0d61b32602add</sha1>
+    <format>Metadata</format>
+  </file>
+</files>

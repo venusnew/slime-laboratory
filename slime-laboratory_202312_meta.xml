@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <identifier>slime-laboratory_202312</identifier>
+  <mediatype>software</mediatype>
+  <collection>softwarelibrary_flash_games</collection>
+  <creator>Neutronized</creator>
+  <date>2011</date>
+  <description>A Flash game about a slime in a lab that you help him pass the levels, collect floppy disks and avoid obstacles.</description>
+  <scanner>Internet Archive HTML5 Uploader 1.7.0</scanner>
+  <subject>flash games</subject>
+  <subject>swf</subject>
+  <subject>flash</subject>
+  <title>Slime Laboratory</title>
+  <uploader>worstusername29@gmail.com</uploader>
+  <publicdate>2023-12-21 14:36:34</publicdate>
+  <addeddate>2023-12-21 14:36:34</addeddate>
+  <curation>[curator]validator@archive.org[/curator][date]20231221144356[/date][comment]checked for malware[/comment]</curation>
+  <year>2011</year>
+  <emulator>ruffle-swf</emulator>
+  <emulator_ext>swf</emulator_ext>
+  <collection>softwarelibrary_flash</collection>
+  <collection>emulation</collection>
+</metadata>
