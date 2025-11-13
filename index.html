@@ -1,73 +1,29 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Slime Laboratory - Gameflare</title>
-
-  <!-- Ruffle Player -->
-  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-
-  <!-- Google Platform (opcional, como en tu código base) -->
-  <script src="https://apis.google.com/js/platform.js"></script>
-
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: #000;
-    }
-    #gameContainer {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    ruffle-player {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-  </style>
-</head>
-
-<body>
-  <!-- Contenedor del juego -->
-  <div class="game-container" id="gameContainer">
-    <div id="ruffle"></div>
-  </div>
-
-  <script>
-    window.addEventListener('DOMContentLoaded', function() {
-      window.RufflePlayer = window.RufflePlayer || {};
-      window.RufflePlayer.config = {
-        warnOnUnsupportedContent: false,
-        maxExecutionDuration: 60,
-        forceScale: true,
-        quality: 'high',
-        allowScriptAccess: false
-      };
-
-      // Intercepta las peticiones al SWF original y las redirige al servidor de Gameflare
-      const _fetch = window.fetch;
-      window.fetch = async (resource, options) => {
-        if (resource instanceof Request && resource.url.replace('http://', 'https://') === 'http://neutronized.com/slimelaboratory.swf'.replace('http://', 'https://')) {
-          let response = await _fetch('https://data.gameflare.com/games/10674/52C8I2KIjjsBSW.swf', options);
-          Object.defineProperty(response, 'url', { value: 'http://neutronized.com/slimelaboratory.swf'.replace('http://', 'https://') });
-          return response;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slime Laboratory</title>
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <script src="https://apis.google.com/js/platform.js"></script>   
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
         }
-        return await _fetch(resource, options);
-      };
-
-      // Crea el reproductor Ruffle y carga el juego
-      var player = window.RufflePlayer.newest().createPlayer();
-      document.getElementById('ruffle').append(player);
-      player.load('http://neutronized.com/slimelaboratory.swf');
-    });
-  </script>
+        ruffle-player {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenedor del juego -->
+    <div class="game-container" id="gameContainer">
+        <embed src="https://www.cooljuegos.com/embed/slime-laboratory/" id="gameEmbed" width="100%" height="100%">
 </body>
 </html>
